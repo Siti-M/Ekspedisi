@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="8dp"
+    tools:context=".rating.RatingActivity">
+
+    <TextView
+        android:id="@+id/tv_main_nama"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Nama"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_main_rating"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/tv_main_nama"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Rating"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/tv_main_komentar"
+        android:layout_width="120dp"
+        android:layout_height="49dp"
+        android:layout_below="@id/tv_main_rating"
+        android:layout_marginBottom="4dp"
+        android:gravity="bottom"
+        android:text="Komentar"
+        android:textSize="25sp" />
+
+    <EditText
+        android:id="@+id/et_nama"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/tv_main_nama"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main_nama"
+        android:layout_toRightOf="@id/tv_main_rating"
+        android:textSize="21sp" />
+
+    <EditText
+        android:id="@+id/et_komentar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_main_nama"
+        android:layout_toRightOf="@id/tv_main_komentar"
+        android:textSize="21sp" />
+
+    <Button
+        android:id="@+id/btn_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:text="Submit" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rc_main"
+        android:layout_margin="4dp"
+        android:background="@android:color/holo_blue_light"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/btn_submit"
+        android:layout_below="@id/tv_main_komentar">
+
+    </androidx.recyclerview.widget.RecyclerView>
+</RelativeLayout>
